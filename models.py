@@ -70,6 +70,7 @@ class techer_History(models.Model):
     
 class studentHistory(models.Model):
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
+    techer=models.ForeignKey(Teacher, on_delete = models.CASCADE)
     Lesson_No = models.IntegerField(default=0,verbose_name="第几次课")
     student_name = models.CharField(max_length=20)
     student_id = models.CharField(max_length=20)
